@@ -1,0 +1,163 @@
+/* ===============================
+   EMPLOYEE SIDEBAR
+================================ */
+
+.emp-sidebar {
+    width: 250px;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    position: fixed;
+    top: 52px;                    /* ✅ navbar ke niche */
+    left: 0;
+    height: calc(100vh - 52px);
+
+    z-index: 1000;  
+}
+
+/* ===============================
+   PROFILE SECTION
+================================ */
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 10px;
+}
+
+.profile-section p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.profile-section span {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+/* ===============================
+   NAV LINKS
+================================ */
+
+.emp-nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.emp-nav-links li {
+    margin-bottom: 6px;
+}
+
+.emp-nav-links a {
+    display: block;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.emp-nav-links a:hover {
+    background-color: #1e293b;
+    color: #38bdf8;
+}
+
+/* Active NavLink */
+.emp-nav-links a.active {
+    background-color: #1e293b;
+    color: #38bdf8;
+    border-left: 4px solid #38bdf8;
+}
+
+/* ===============================
+   LOGOUT BUTTON
+================================ */
+
+.emp-logout-btn {
+    margin-top: auto;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.emp-logout-btn:hover {
+    background-color: #dc2626;
+}
+
+/* ===============================
+   RESPONSIVE - MOBILE
+================================ */
+@media (max-width: 768px) {
+    .emp-sidebar {
+        display: flex;              /* show it */
+        flex-direction: row;        /* horizontal layout */
+        width: 100%;                /* full width */
+        height: auto;               /* auto height */
+        position: relative;         /* not fixed */
+        padding: 10px 15px;
+        overflow-x: auto;           /* horizontal scroll if many links */
+    }
+
+    .profile-section {
+        flex-direction: row;        /* avatar + name inline */
+        align-items: center;
+        margin-bottom: 0;
+        gap: 10px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .emp-nav-links {
+        display: flex;              /* horizontal links */
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 0;
+        flex-wrap: nowrap;
+    }
+
+    .emp-nav-links li {
+        margin-bottom: 0;
+    }
+
+    .emp-nav-links a {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .emp-logout-btn {
+        margin-left: auto;          /* push logout to right */
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    /* main content should not have left margin on mobile */
+    .emp-main-content {
+        margin-left: 0;
+        padding-top: 10px;
+    }
+}

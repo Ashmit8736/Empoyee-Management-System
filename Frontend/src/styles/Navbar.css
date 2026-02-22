@@ -1,0 +1,183 @@
+/* ===============================
+   NAVBAR BASE
+================================ */
+
+.navbar {
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+  color: white;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  z-index: 3000;
+
+  display: flex;
+  align-items: center;       /* 🔥 FIX */
+  padding: 0 20px;
+}
+
+/* ===============================
+   TOP ROW (LOGO + HAMBURGER)
+================================ */
+
+.nav-top {
+  display: flex;
+  align-items: center;
+}
+
+/* ===============================
+   LOGO
+================================ */
+
+.nav-logo a {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ===============================
+   HAMBURGER
+================================ */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+/* Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===============================
+   NAV LINKS (DESKTOP)
+================================ */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-left: auto;        /* 🔥 RIGHT ALIGN */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00eaff;
+}
+
+/* ===============================
+   PROFILE
+================================ */
+
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+  border-radius: 50%;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Dropdown */
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #7fe008;
+  padding: 10px;
+  border-radius: 6px;
+  min-width: 140px;
+  z-index: 999;
+}
+
+.dropdown-menu .user-name {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.logout {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  background: #dc2626;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ===============================
+   MOBILE & TABLET
+================================ */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: auto;
+    flex-direction: column;      /* 🔥 MOBILE ONLY */
+    align-items: stretch;
+    padding: 12px 20px;
+  }
+
+  .nav-top {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 12px;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    width: 100%;
+  }
+}

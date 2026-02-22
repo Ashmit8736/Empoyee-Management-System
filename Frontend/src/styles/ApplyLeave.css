@@ -1,0 +1,90 @@
+/* ===============================
+   PAGE CENTER (RIGHT SIDE)
+================================ */
+.applyleave-page {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ===============================
+   CARD STYLE
+================================ */
+.applyleave-card {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.applyleave-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: white;
+    font-weight: 600;
+}
+
+/* ===============================
+   FORM
+================================ */
+.applyleave-card label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.applyleave-card select,
+.applyleave-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #cbd5f5;
+    font-size: 0.9rem;
+    outline: none;
+    background-color: #f8fafc;
+}
+
+.applyleave-card select:focus,
+.applyleave-card input:focus {
+    border-color: #3b82f6;
+    background-color: white;
+}
+
+/* ===============================
+   SUBMIT BUTTON
+================================ */
+.submit-btn {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 480px) {
+    .applyleave-card {
+        padding: 22px;
+    }
+}

@@ -1,0 +1,145 @@
+/* ===============================
+SIDEBAR
+================================ */
+
+.adm-sidebar {
+    width: 250px;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    position: fixed;
+    top: 52px;                    /* ✅ navbar ke niche */
+    left: 0;
+    height: calc(100vh - 52px);
+
+    z-index: 1000;                /* ✅ navbar se kam */
+}
+
+/* ===============================
+   MAIN CONTENT
+================================ */
+.adm-main-content {
+    margin-left: 250px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 50px;
+}
+.adm-header {
+    /* background: white; */
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+
+/* ===============================
+PROFILE SECTION
+================================ */
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 10px;
+}
+
+.profile-section p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.profile-section span {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+/* ===============================
+NAV LINKS
+================================ */
+
+.adm-nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.adm-nav-links li {
+    margin-bottom: 6px;
+}
+
+.adm-nav-links a {
+    display: block;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.adm-nav-links a:hover {
+    background-color: #1e293b;
+    color: #38bdf8;
+}
+
+/* Active NavLink */
+.adm-nav-links a.active {
+    background-color: #1e293b;
+    color: #38bdf8;
+    border-left: 4px solid #38bdf8;
+}
+
+/* ===============================
+   LOGOUT BUTTON
+================================ */
+
+.adm-logout-btn {
+    margin-top: auto;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.adm-logout-btn:hover {
+    background-color: #dc2626;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1024px) {
+
+    .adm-sidebar {
+        position: relative;     /* 👈 fixed hata diya */
+        top: 0;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .adm-main-content {
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+

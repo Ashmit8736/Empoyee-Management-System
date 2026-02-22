@@ -1,0 +1,318 @@
+/* ===============================
+   ADMIN DASHBOARD RESET & BASE
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+/* ===============================
+   LAYOUT
+================================ */
+.admin-dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+
+/* ===============================
+   MAIN CONTENT
+================================ */
+.adm-main-content {
+    margin-left: 250px;
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 50px;
+}
+
+.adm-main-content header h1 {
+    font-size: 1.8rem;
+    color: #0f172a;
+}
+
+/* ===============================
+   STATS CARDS
+================================ */
+.adm-stats-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.adm-stat-card {
+   background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid #3b82f6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.adm-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.adm-stat-card span:first-child {
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+.adm-stat-card span:last-child {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* ===============================
+   TABLE
+================================ */
+.adm-table-container {
+
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.adm-table-container h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white !important;
+}
+
+.adm-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    
+}
+
+.adm-table th {
+     background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    color: white;
+    padding: 0.8rem 1rem;
+    text-align: left;
+}
+
+.adm-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    color:white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+
+/* ===============================
+   EDIT BOX
+================================ */
+.adm-edit-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    max-width: 500px;
+}
+
+.adm-edit-box input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+}
+
+.adm-edit-box button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.adm-edit-box button:hover {
+    background-color: #2563eb;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.adm-add-btn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.adm-add-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+.adm-edit-btn {
+    background-color: #e2e8f0;
+    color: #1e293b;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.adm-edit-btn:hover {
+    background-color: #cbd5e1;
+}
+
+.adm-delete-btn {
+    background-color: #fee2e2;
+    color: #ef4444;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.adm-delete-btn:hover {
+    background-color: #fecaca;
+}
+
+/* ================= Remark Input ================= */
+
+.adm-table input {
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 13px;
+  width: 100%;
+}
+
+/* ================= Buttons ================= */
+
+.adm-table button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.2s ease;
+}
+
+.adm-table button:first-child {
+  background: #10b981;
+  color: white;
+}
+
+.adm-table button:first-child:hover {
+  background: #059669;
+}
+
+.adm-table button:last-child {
+  background: #ef4444;
+  color: white;
+}
+
+.adm-table button:last-child:hover {
+  background: #dc2626;
+}
+
+/* ================= Alert ================= */
+
+.alert {
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.alert.success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.alert.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+@media (max-width: 768px) {
+    .adm-dashboard-layout {
+        flex-direction: column; /* stack sidebar on top of content */
+    }
+
+    .adm-sidebar {
+        width: 100%;        /* full width */
+        height: auto;       /* let content decide height */
+        position: relative; /* remove fixed */
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 15px;
+        overflow-x: auto;
+    }
+
+    .profile-section {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+        gap: 10px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .adm-nav-links {
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 0;
+        flex-wrap: nowrap;
+    }
+
+    .adm-nav-links li {
+        margin-bottom: 0;
+    }
+
+    .adm-nav-links a {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .adm-logout-btn {
+        margin-left: auto;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .adm-main-content {
+        margin-left: 0; /* remove left margin */
+        padding: 10px 15px; /* reduce padding */
+    }
+}
+
+
+
+

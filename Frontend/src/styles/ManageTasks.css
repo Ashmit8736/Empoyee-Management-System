@@ -1,0 +1,210 @@
+/* ===============================
+   PAGE LAYOUT
+================================ */
+.page {
+  padding: 20px;
+  
+  min-height: 100vh;
+  margin-left: 250px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.page h2 {
+  margin-bottom: 16px;
+  color: #0f172a;
+  font-size: 22px;
+}
+
+/* ===============================
+   TABLE CONTAINER
+================================ */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+      background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* ===============================
+   TABLE
+================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+thead {
+   background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+  color: #ffffff;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e8f0;
+  color: white;
+}
+
+
+
+/* ===============================
+   STATUS BADGE (agar future me use ho)
+================================ */
+.status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.active {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status.inactive {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+button {
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+/* ===============================
+   RESPONSIVE (TABLET)
+================================ */
+@media (max-width: 768px) {
+  .page {
+    padding: 15px;
+  }
+
+  th,
+  td {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+/* ===============================
+   RESPONSIVE (MOBILE)
+================================ */
+@media (max-width: 480px) {
+  .page h2 {
+    font-size: 18px;
+  }
+
+  table {
+    min-width: 500px;
+  }
+
+  th,
+  td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* TASK SECTION */
+.task-section {
+  margin-top: 40px;
+  background-image: linear-gradient(-225deg, #1ccde5 0%, #e8ebee 100%);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.task-section h3 {
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+/* TASK FORM */
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5f5;
+}
+
+.task-form button {
+  background: #2563eb;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #1d4ed8;
+}
+
+/* STATUS */
+.status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+/* TASK HEADER */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* CLOSE BUTTON */
+.task-close-btn {
+  background: #ffffff;
+  color: rgb(255, 0, 0);
+  border-radius: 50%;
+  border: 2px solid #ff0000;
+  cursor: pointer;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.task-close-btn:hover {
+  background: #dc2626;
+  color:white;
+  border: 2px solid #ffffff;
+}
+
+

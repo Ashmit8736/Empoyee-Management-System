@@ -1,0 +1,76 @@
+/* ===============================
+   PAGE CENTER (RIGHT SIDE)
+================================ */
+.profile-page {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ===============================
+   PROFILE CARD
+================================ */
+.profile-card {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    
+}
+
+.profile-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: white;
+    font-weight: 600;
+}
+
+/* ===============================
+   PROFILE ROWS
+================================ */
+.profile-row {
+    margin-bottom: 16px;
+}
+
+.profile-row span {
+    display: block;
+    font-size: 0.8rem;
+    color: white;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+}
+
+.profile-row p {
+    background-color: #f8fafc;
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin: 0;
+    font-weight: 500;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-row p {
+        font-size: 0.9rem;
+    }
+}
+.stat-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;}
