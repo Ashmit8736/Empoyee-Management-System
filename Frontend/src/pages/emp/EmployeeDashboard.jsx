@@ -284,7 +284,7 @@ useEffect(() => {
                     Mark as Done
                   </button>
                 ) : (
-                  <span className="completed-text">Done</span>
+                  <span className="completed-text">Task Done</span>
                 )}
               </td>
             </tr>

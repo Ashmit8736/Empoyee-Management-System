@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../../styles/ManageEmployees.css";
 import AdminSidebar from "../../components/AdminSidebar";
 import api from "../api/axios";
@@ -6,6 +6,9 @@ import api from "../api/axios";
 const ManageEmployees = () => {
   const [employees, setEmployees] = useState([]);
   const [editEmployee, setEditEmployee] = useState(null);
+
+  // 🔽 REF FOR EDIT FORM
+  const editFormRef = useRef(null);
 
   useEffect(() => {
     const fetchEmployees = async () => {
@@ -28,6 +31,14 @@ const ManageEmployees = () => {
       department: emp.department ?? "",
       name: emp.name ?? "",
     });
+
+    // 🔽 SCROLL AFTER STATE UPDATE
+    setTimeout(() => {
+      editFormRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
   };
 
   const handleChange = (e) => {
@@ -96,7 +107,7 @@ const ManageEmployees = () => {
         </div>
 
         {editEmployee && (
-          <div className="adm-edit-box">
+          <div className="adm-edit-box" ref={editFormRef}>
             <h3>Edit Department</h3>
 
             <input
@@ -113,8 +124,8 @@ const ManageEmployees = () => {
               placeholder="Department"
             />
 
-            <button onClick={handleUpdate}>Update</button>
-            <button onClick={() => setEditEmployee(null)}>Cancel</button>
+            <button className="adm-edit-btn-update" onClick={handleUpdate}>Update</button>
+            <button className="adm-edit-btn-cancel" onClick={() => setEditEmployee(null)}>Cancel</button>
           </div>
         )}
       </main>
